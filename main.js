@@ -28,7 +28,8 @@ const render = () => {
       </div>
     </li>`).insertBefore($lastLi)
         $li.on('click', () => {
-            window.open(node.url)
+            window.open(node.url, "_self") //_self加引号
+
         })
         $li.on('click', '.close', (e) => {
             e.stopPropagation() // 阻止冒泡
